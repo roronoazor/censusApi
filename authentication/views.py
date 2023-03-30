@@ -12,8 +12,11 @@ User = get_user_model()
 
 class SignupView(generics.CreateAPIView):
 
+ serializer_class = UserSerializer
+
  def post(self, request, *args, **kwargs):
-        
+        import time
+        time.sleep(10)
         user = User.objects.filter(email=request.data.get('email')).first()
         
         if user:    

@@ -6,6 +6,7 @@ class Census(models.Model):
     last_name = models.CharField(max_length=255)
     date_of_birth = models.DateField()
     phone_number = models.CharField(max_length=20)
+    marital_status = models.CharField(max_length=100, blank=True, null=True)
     house_address = models.CharField(max_length=255)
     residential_building = models.CharField(max_length=255, blank=True)
     lga_of_residence = models.CharField(max_length=255)
